@@ -23,4 +23,5 @@
     <!-- Текстовые поля упражнения -->
     <string name="exercise_name_label">Exercise Name</string>
     <string name="exercise_description_label">Exercise Description</string>
+    <string name="exercise_date_edited_label">Exercise Description</string>
 </resources>

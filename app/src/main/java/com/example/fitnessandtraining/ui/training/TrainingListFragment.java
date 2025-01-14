@@ -39,13 +39,15 @@ public class TrainingListFragment extends Fragment {
         TrainingViewModel trainingViewModel = new ViewModelProvider(this).get(TrainingViewModel.class); // Инициализация ViewModel через Hilt
 
         // Настройка RecyclerView
-        adapter = new TrainingListAdapter();
+        TrainingListAdapter adapter = new TrainingListAdapter();
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext())); // Линейный менеджер компоновки
         binding.recyclerView.setAdapter(adapter); // Установка адаптера
 
-        // Наблюдение за данными из ViewModel
+        // Передача запроса всех строк из таблицы trainings ViewModel в адаптер
         trainingViewModel.getAllTrainings().observe(getViewLifecycleOwner(), trainings -> {
-            adapter.submitList(trainings); // Обновление списка в адаптере
+            if (trainings != null) {
+                adapter.submitList(trainings); // Обновление списка в адаптере
+            }
         });
 
         // Обработка нажатий на элементы списка

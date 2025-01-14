@@ -1,7 +1,5 @@
 package com.example.fitnessandtraining.ui.training;
 
-import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,7 +42,8 @@ public class TrainingCreatingFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        trainingViewModel = new ViewModelProvider(this).get(TrainingViewModel.class); // Инициализация ViewModel
+        // Инициализация ViewModel для тренировки
+        trainingViewModel = new ViewModelProvider(this).get(TrainingViewModel.class);
 
         // Установка обработчика для выбора времени
         binding.trainingDurationEdit.setOnClickListener(v -> showTimePicker());
@@ -130,6 +129,7 @@ public class TrainingCreatingFragment extends Fragment {
         requireActivity().getSupportFragmentManager().popBackStack();
     }
 
+    // конвертирование выбранного времени в минуты
     private int convertTimeToMinutes(String time) {
         String[] parts = time.split(":");
         int hours = Integer.parseInt(parts[0]);
@@ -137,8 +137,10 @@ public class TrainingCreatingFragment extends Fragment {
         return hours * 60 + minutes;
     }
 
+    // конвертирование выбранной даты в миллисекунды
     private long convertDateToMillis(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+
         try {
             Date parsedDate = sdf.parse(date);
             return parsedDate != null ? parsedDate.getTime() : 0;

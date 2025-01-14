@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Название упражнения -->
+    <TextView
+        android:id="@+id/item_exercise_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Exercise Name"
+        android:textSize="16sp"
+        android:padding="4dp" />
+
+    <!-- Дата редактирования упражнения -->
+    <TextView
+        android:id="@+id/item_exercise_date_edited"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Edited Date"
+        android:textSize="16sp"
+        android:gravity="end"
+        android:padding="4dp" />
+</LinearLayout>
