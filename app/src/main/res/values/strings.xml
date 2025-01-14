@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Fitness and training</string>
+    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Кнопки -->
+    <string name="fab_add_training">Add Training</string>
+    <string name="fab_add_exercise">Add Exercise</string>
+    <string name="save_button">Save</string>
+    <!-- Фрагменты тренировок -->
+    <string name="fragment_training_list_label">Training List</string>
+    <string name="fragment_training_creating_label">Create Training</string>
+    <string name="fragment_training_view_label">View Training</string>
+    <string name="fragment_training_editing_label">Edit Training</string>
+    <!-- Фрагменты упражнений -->
+    <string name="fragment_exercise_creating_label">Create Exercise</string>
+    <string name="fragment_exercise_view_label">View Exercise</string>
+    <string name="fragment_exercise_editing_label">Edit Exercise</string>
+    <!-- Текстовые поля тренировки -->
+    <string name="training_type_label">Type of Training</string>
+    <string name="training_duration_label">Training Duration</string>
+    <string name="training_date_label">Training Date</string>
+    <!-- Текстовые поля упражнения -->
+    <string name="exercise_name_label">Exercise Name</string>
+    <string name="exercise_description_label">Exercise Description</string>
+</resources>

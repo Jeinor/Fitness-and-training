@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/trainingListFragment">
+
+    <!-- Фрагменты тренировок -->
+    <!-- Фрагмент со списком тренировок -->
+    <fragment
+        android:id="@+id/trainingListFragment"
+        android:name="com.example.fitnessandtraining.ui.training.TrainingListFragment"
+        android:label="@string/fragment_training_list_label"
+        tools:layout="@layout/fragment_training_list">
+
+        <!-- Переход к фрагменту создания тренировки -->
+        <action
+            android:id="@+id/action_trainingListFragment_to_trainingCreatingFragment"
+            app:destination="@id/trainingCreatingFragment" />
+
+        <!-- Переход к фрагменту просмотра выбранной тренировки -->
+        <action
+            android:id="@+id/action_trainingListFragment_to_trainingViewFragment"
+            app:destination="@id/trainingViewFragment" />
+    </fragment>
+
+    <!-- Фрагмент для создания тренировки -->
+    <fragment
+        android:id="@+id/trainingCreatingFragment"
+        android:name="com.example.fitnessandtraining.ui.training.TrainingCreatingFragment"
+        android:label="@string/fragment_training_creating_label"
+        tools:layout="@layout/fragment_training_creating" >
+
+        <!-- Переход к фрагменту со списком тренировок -->
+        <action
+            android:id="@+id/action_trainingCreatingFragment_to_trainingListFragment"
+            app:destination="@id/trainingListFragment" />
+    </fragment>
+
+    <!-- Фрагмент для просмотра тренировки -->
+    <fragment
+        android:id="@+id/trainingViewFragment"
+        android:name="com.example.fitnessandtraining.ui.training.TrainingViewFragment"
+        android:label="@string/fragment_training_view_label"
+        tools:layout="@layout/fragment_training_view" >
+
+        <!-- Переход к фрагменту со списком тренировок -->
+        <action
+            android:id="@+id/action_trainingViewFragment_to_trainingListFragment"
+            app:destination="@id/trainingListFragment" />
+
+        <!-- Переход к фрагменту редактирования тренировки -->
+        <action
+            android:id="@+id/action_trainingViewFragment_to_trainingEditingFragment"
+            app:destination="@id/trainingEditingFragment" />
+
+        <!-- Переход к фрагменту создания упражнения -->
+        <action
+            android:id="@+id/action_trainingViewFragment_to_exerciseCreatingFragment"
+            app:destination="@id/exerciseCreatingFragment" />
+
+        <!-- Переход к фрагменту просмотра выбранного упражнения -->
+        <action
+            android:id="@+id/action_trainingViewFragment_to_exerciseViewFragment"
+            app:destination="@id/exerciseViewFragment" />
+    </fragment>
+
+    <!-- Фрагмент для редактирования тренировки -->
+    <fragment
+        android:id="@+id/trainingEditingFragment"
+        android:name="com.example.fitnessandtraining.ui.training.TrainingEditingFragment"
+        android:label="@string/fragment_training_editing_label"
+        tools:layout="@layout/fragment_training_editing" >
+
+        <!-- Переход к фрагменту просмотра выбранной тренировки -->
+        <action
+            android:id="@+id/action_trainingEditingFragment_to_trainingViewFragment"
+            app:destination="@id/trainingViewFragment" />
+    </fragment>
+
+    <!-- Фрагменты упражнений -->
+    <!-- Фрагмент для создания упражнения -->
+    <fragment
+        android:id="@+id/exerciseCreatingFragment"
+        android:name="com.example.fitnessandtraining.ui.exercise.ExerciseCreatingFragment"
+        android:label="@string/fragment_exercise_creating_label"
+        tools:layout="@layout/fragment_exercise_creating" >
+
+        <!-- Переход к фрагменту просмотра выбранной тренировки -->
+        <action
+            android:id="@+id/action_exerciseCreatingFragment_to_trainingViewFragment"
+            app:destination="@id/trainingViewFragment" />
+    </fragment>
+
+    <!-- Фрагмент для просмотра тренировки -->
+    <fragment
+        android:id="@+id/exerciseViewFragment"
+        android:name="com.example.fitnessandtraining.ui.exercise.ExerciseViewFragment"
+        android:label="@string/fragment_exercise_view_label"
+        tools:layout="@layout/fragment_exercise_view" >
+
+        <!-- Переход к фрагменту просмотра выбранной тренировки -->
+        <action
+            android:id="@+id/action_exerciseViewFragment_to_trainingViewFragment"
+            app:destination="@id/trainingViewFragment" />
+
+        <!-- Переход к фрагменту создания упражнения -->
+        <action
+            android:id="@+id/action_exerciseViewFragment_to_exerciseEditingFragment"
+            app:destination="@id/exerciseEditingFragment" />
+    </fragment>
+
+    <!-- Фрагмент для редактирования упражнения -->
+    <fragment
+        android:id="@+id/exerciseEditingFragment"
+        android:name="com.example.fitnessandtraining.ui.exercise.ExerciseEditingFragment"
+        android:label="@string/fragment_exercise_editing_label"
+        tools:layout="@layout/fragment_exercise_editing" >
+
+        <!-- Переход к фрагменту просмотра выбранной тренировки -->
+        <action
+            android:id="@+id/action_exerciseEditingFragment_to_exerciseViewFragment"
+            app:destination="@id/exerciseViewFragment" />
+    </fragment>
+
+</navigation>
